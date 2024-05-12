@@ -36,3 +36,9 @@ class CheltuieliRaportView(ListView):
     model = CheltuieliRaportModel
     template_name = 'aplicatie/raport_cheltuieli.html'
     pass
+
+
+class CheltuieliView(ListView):
+    model = CheltuieliRaportModel
+    template_name = 'aplicatie/cheltuieli.html'
+    pass

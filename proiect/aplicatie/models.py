@@ -31,3 +31,8 @@ class VenituriRaportModel(models.Model):
 
 class CheltuieliRaportModel(models.Model):
     pass
+
+
+class CheltuieliModel(models.Model):
+    pass
+
