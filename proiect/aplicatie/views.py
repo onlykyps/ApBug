@@ -1,23 +1,34 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView
 from django.urls import reverse
-from aplicatie.models import Transaction, BudgetTransaction, VenituriModel, CheltuieliRaportModel
+from aplicatie.models import Transaction, BudgetTransaction, VenituriModel, CheltuieliRaportModel, CheltuieliModel
 
 
 # Create your views here.
+
+# sectiune cod inutil de la teste
 
 class BudgetTransactionView(ListView):
     model = BudgetTransaction
     template_name = 'aplicatie/transactions_index.html'
 
 
+# sectiune cod inutil de la teste
+
+
+# sectiune cod util
 class CreateBudgetTransactionView(CreateView):
-    model = BudgetTransaction
+    model = CheltuieliModel
     fields = ['city', 'country']
     template_name = 'aplicatie/transactions_form.html'
 
     def get_success_url(self):
-        return reverse('transactions:transactions_list')
+        return reverse('transactions:cheltuieli')
+
+
+class CheltuieliView(ListView):
+    model = CheltuieliModel
+    template_name = 'aplicatie/cheltuieli.html'
 
 
 class VenituriView(ListView):
@@ -35,10 +46,4 @@ class VenituriRaportView(ListView):
 class CheltuieliRaportView(ListView):
     model = CheltuieliRaportModel
     template_name = 'aplicatie/raport_cheltuieli.html'
-    pass
-
-
-class CheltuieliView(ListView):
-    model = CheltuieliRaportModel
-    template_name = 'aplicatie/cheltuieli.html'
     pass

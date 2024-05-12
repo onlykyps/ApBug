@@ -1,5 +1,29 @@
 {% extends 'base.html' %}
+
 {% block title %}
 <p1>Aici vor fi afisate cheltuielile</p1>
-
+<table class="table">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Active</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cheltuielimodel_list %}
+             <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ item.city }}</td>
+                <td>{{ item.country }}</td>
+                <td>{{ item.active }}</td>
+                <td>
+                    <a class="btn btn-info btn-sm" href="{% url 'transactions:adaugare' %}">Adauga</a>
+                </td>
+             </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
