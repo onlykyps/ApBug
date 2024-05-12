@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView
 from django.urls import reverse
-from aplicatie.models import Transaction, BudgetTransaction
+from aplicatie.models import Transaction, BudgetTransaction, VenituriModel
 
 
 # Create your views here.
@@ -18,3 +18,9 @@ class CreateBudgetTransactionView(CreateView):
 
     def get_success_url(self):
         return reverse('transactions:transactions_list')
+
+
+class VenituriView(ListView):
+    model = VenituriModel
+    template_name = 'aplicatie/Venituri.html'
+    pass

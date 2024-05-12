@@ -21,4 +21,5 @@ class BudgetTransaction(models.Model):
         return f'{self.country} --> {self.city}'
 
 
-
+class VenituriModel(models.Model):
+    pass

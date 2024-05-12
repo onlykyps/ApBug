@@ -7,4 +7,5 @@ app_name = 'transactions'
 urlpatterns = [
     path('', views.BudgetTransactionView.as_view(), name='transactions_list'),
     path('adaugare/', views.CreateBudgetTransactionView.as_view(), name='adaugare'),
+    path('venituri/', views.VenituriView.as_view(), name='venituri'),
 ]
