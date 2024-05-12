@@ -24,3 +24,9 @@ class VenituriView(ListView):
     model = VenituriModel
     template_name = 'aplicatie/Venituri.html'
     pass
+
+
+class VenituriRaportView(ListView):
+    model = VenituriModel
+    template_name = 'aplicatie/raport_venituri.html'
+    pass

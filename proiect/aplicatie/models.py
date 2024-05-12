@@ -23,3 +23,7 @@ class BudgetTransaction(models.Model):
 
 class VenituriModel(models.Model):
     pass
+
+
+class VenituriRaportModel(models.Model):
+    pass
