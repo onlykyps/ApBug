@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView
 from django.urls import reverse
-from aplicatie.models import Transaction, BudgetTransaction, VenituriModel
+from aplicatie.models import Transaction, BudgetTransaction, VenituriModel, CheltuieliRaportModel
 
 
 # Create your views here.
@@ -29,4 +29,10 @@ class VenituriView(ListView):
 class VenituriRaportView(ListView):
     model = VenituriModel
     template_name = 'aplicatie/raport_venituri.html'
+    pass
+
+
+class CheltuieliRaportView(ListView):
+    model = CheltuieliRaportModel
+    template_name = 'aplicatie/raport_cheltuieli.html'
     pass
